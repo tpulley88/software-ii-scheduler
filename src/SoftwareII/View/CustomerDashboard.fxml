@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SoftwareII.Controller.CustomerDashboard">
+   <children>
+      <VBox layoutY="2.0" prefHeight="600.0" prefWidth="900.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="88.0" prefWidth="902.0" text="%custDashboard" textAlignment="CENTER">
+               <font>
+                  <Font name="Georgia Bold" size="36.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></Label>
+            <TableView fx:id="custTable" prefHeight="293.0" prefWidth="870.0">
+              <columns>
+                <TableColumn fx:id="colCustIDNum" prefWidth="75.0" text="%IDNumber" />
+                <TableColumn fx:id="colCustName" prefWidth="133.5999984741211" text="%Name" />
+                  <TableColumn fx:id="colCustAdd" prefWidth="150.3999786376953" text="%Address" />
+                  <TableColumn fx:id="colCustState" minWidth="0.0" prefWidth="164.20004272460938" text="%StateProvince" />
+                  <TableColumn fx:id="colCustZip" prefWidth="105.80007934570312" text="%ZipPostalCode" />
+                  <TableColumn fx:id="colCustCountry" prefWidth="97.0" text="%Country" />
+                  <TableColumn fx:id="colCustPhone" prefWidth="152.5999755859375" text="%PhoneNumber" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="15.0" right="15.0" top="20.0" />
+               </VBox.margin>
+            </TableView>
+            <HBox prefHeight="133.0" prefWidth="900.0">
+               <children>
+                  <VBox prefHeight="134.0" prefWidth="641.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="500.0" text="%userMessageTitle" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Georgia Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="userMessLabel" alignment="CENTER" prefHeight="70.0" prefWidth="430.0" text=" " textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Georgia" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin></Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox prefHeight="90.0" prefWidth="461.0">
+                     <children>
+                        <Button fx:id="custModButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onClickModify" prefHeight="30.0" prefWidth="200.0" text="%modifyCust" textAlignment="CENTER">
+                           <font>
+                              <Font name="Georgia" size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="40.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="custDeleteButton" alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="70.0" mnemonicParsing="false" onAction="#onClickDelete" prefHeight="30.0" prefWidth="200.0" text="%deleteCust" textAlignment="CENTER">
+                           <font>
+                              <Font name="Georgia" size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="40.0" top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="custAddButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onClickAdd" prefHeight="30.0" prefWidth="200.0" text="%addCust" textAlignment="CENTER">
+                           <font>
+                              <Font name="Georgia" size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="40.0" top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="100.0" right="30.0" top="10.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children></HBox>
+            <HBox prefHeight="56.0" prefWidth="900.0">
+               <children>
+                  <Button fx:id="returnMainButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onClickMain" prefHeight="30.0" prefWidth="275.0" text="%returnMain" textAlignment="CENTER">
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="manageApptButton" alignment="CENTER" contentDisplay="CENTER" layoutX="30.0" layoutY="20.0" mnemonicParsing="false" onAction="#onClickManage" prefHeight="30.0" prefWidth="275.0" text="%manageAppt" textAlignment="CENTER">
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="exitButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onClickExit" prefHeight="30.0" prefWidth="275.0" text="%exit" textAlignment="CENTER">
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children></HBox>
+         </children></VBox>
+   </children>
+</AnchorPane>

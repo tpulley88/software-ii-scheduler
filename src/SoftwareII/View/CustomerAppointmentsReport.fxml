@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="175.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SoftwareII.Controller.CustomerAppointmentsReport">
+   <children>
+      <VBox prefHeight="175.0" prefWidth="700.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="55.0" prefWidth="700.0" text="%numApptCust" textAlignment="CENTER">
+               <font>
+                  <Font name="Georgia Bold" size="30.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="41.0" prefWidth="700.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="16.0" prefWidth="70.0" text="%month">
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" top="10.0" />
+                     </HBox.margin></Label>
+                  <ComboBox fx:id="monthCB" onAction="#onClickMonth" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets left="10.0" top="7.0" />
+                     </HBox.margin></ComboBox>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="25.0" layoutY="20.0" prefHeight="16.0" prefWidth="70.0" text="%type">
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="typeCB" layoutX="106.0" layoutY="17.0" onAction="#onClickType" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets left="10.0" top="7.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="25.0" layoutY="20.0" prefHeight="16.0" prefWidth="70.0" text="%result">
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="result" contentDisplay="CENTER" layoutX="518.0" layoutY="20.0" prefHeight="16.0" prefWidth="70.0">
+                     <font>
+                        <Font name="Georgia Bold Italic" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="41.0" prefWidth="700.0">
+               <children>
+                  <Button fx:id="clearSel" mnemonicParsing="false" onAction="#onClickClear" prefHeight="30.0" prefWidth="200.0" text="%clear">
+                     <font>
+                        <Font name="Georgia" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="240.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="apptDash" mnemonicParsing="false" onAction="#onClickApptDash" prefHeight="30.0" prefWidth="200.0" text="%apptDashboard">
+                     <font>
+                        <Font name="Georgia" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

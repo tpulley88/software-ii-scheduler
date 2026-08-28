@@ -1,0 +1,4 @@
+LOGIN ATTEMPTS (username | UTC DateTime | Timestamp | SUCCESS/FAIL)
+
+Attempted username: test | UTC DateTime: 2022-04-08T00:07:14.937339200 | UTC Timestamp: 2022-04-08 00:07:14.9373392 |  SUCCESSFUL LOGIN
+Attempted username: test | UTC DateTime: 2022-04-12T07:38:11.355093 | UTC Timestamp: 2022-04-12 07:38:11.355093 |  SUCCESSFUL LOGIN

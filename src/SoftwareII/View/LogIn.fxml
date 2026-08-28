@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="280.0" prefWidth="300.0" style="-fx-background-color: #ECECEC; -fx-border-color: black; -fx-border-radius: 5px 5px 5px 5px; -fx-border-width: .5;" vgap="10" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SoftwareII.Controller.Login">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="350.0" prefWidth="280.0">
+         <children>
+            <VBox prefHeight="350.0" prefWidth="280.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="62.0" prefWidth="410.0" text="%login" textAlignment="CENTER">
+                     <font>
+                        <Font name="Georgia Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="%login1">
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="userNameField" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" promptText="%login1.1">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="50.0" right="40.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label layoutX="40.0" layoutY="117.0" text="%login2">
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <PasswordField fx:id="passwordField" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" promptText="%login1.2">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="50.0" top="10.0" />
+                     </VBox.margin>
+                  </PasswordField>
+                  <Label layoutX="40.0" layoutY="169.0" text="%location">
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="getUserLocation" layoutX="40.0" layoutY="222.0" prefHeight="16.0" prefWidth="177.0" text="userLocation">
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="75.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="50.0" prefWidth="290.0">
+                     <children>
+                        <Button fx:id="loginButton" mnemonicParsing="false" onAction="#loginClick" prefHeight="26.0" prefWidth="96.0" text="%login2.1">
+                           <font>
+                              <Font name="Georgia" size="12.800000190734863" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="35.0" top="30.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelClick" prefHeight="26.0" prefWidth="105.0" text="%cancel">
+                           <HBox.margin>
+                              <Insets left="20.0" top="30.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Georgia" size="12.800000190734863" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+   </children>
+</GridPane>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="325.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SoftwareII.Controller.SchedulingDashboard">
+   <children>
+      <VBox prefHeight="325.0" prefWidth="625.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="82.0" prefWidth="1424.0" text="%GCODashboard" textAlignment="CENTER">
+               <font>
+                  <Font name="Georgia Bold" size="36.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="151.0" prefWidth="626.0">
+               <children>
+                  <Button fx:id="customerButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onCustDashClick" prefHeight="65.0" prefWidth="275.0" text="%customerButton" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Georgia" size="22.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" top="45.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="appointmentButton" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onApptDashClick" prefHeight="65.0" prefWidth="275.0" text="%appointmentsButton" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Georgia" size="22.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" top="45.0" />
+                     </HBox.margin>
+                  </Button>
+               </children></HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="returnLogin" mnemonicParsing="false" onAction="#onClickReturnLogin" prefHeight="30.0" prefWidth="200.0" text="%returnLogin">
+                     <font>
+                        <Font name="Georgia" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="105.0" top="30.0" />
+                     </HBox.margin></Button>
+                  <Button fx:id="mainExit" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onClickExit" prefHeight="30.0" prefWidth="200.0" text="%exit">
+                     <font>
+                        <Font name="Georgia" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" top="30.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
