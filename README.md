@@ -2,6 +2,8 @@
 
 A JavaFX desktop application for managing customers and appointments across time zones. The project demonstrates a layered DAO architecture, prepared SQL statements, localized UI resources, scheduling validation, and operational reports.
 
+> Portfolio note: this is a sanitized snapshot of a 2021 university project, preserved to demonstrate Java desktop architecture rather than current production design.
+
 ## Highlights
 
 - Customer and appointment create, read, update, and delete workflows
@@ -37,3 +39,5 @@ Originally created by Terin Pulley in 2021 as a university Software II project. 
 ## Privacy
 
 Use fictional data only. The repository contains no production database or real customer records.
+
+The public repository starts with this sanitized portfolio edition; the original classroom history was intentionally not imported.
