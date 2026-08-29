@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+}
+
+repositories { mavenCentral() }
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+sourceSets {
+    main {
+        java.srcDirs = ['src']
+        java.exclude 'SoftwareII/Tests/**'
+        resources.srcDirs = ['src']
+        resources.exclude '**/*.java'
+    }
+    test {
+        java.srcDirs = ['src']
+        java.include 'SoftwareII/Tests/**'
+    }
+}
+
+javafx {
+    version = '17.0.10'
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+dependencies {
+    implementation 'com.mysql:mysql-connector-j:8.3.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.2'
+}
+
+application { mainClass = 'SoftwareII.Main' }
+
+test { useJUnitPlatform() }

@@ -2,8 +2,11 @@
 *.iml
 out/
 target/
+build/
+.gradle/
 *.class
 *.log
+login_activity.txt
 .DS_Store
 .env
 *.sql

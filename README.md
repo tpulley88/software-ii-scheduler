@@ -32,6 +32,20 @@ SCHEDULER_DB_PASSWORD
 
 The original classroom database schema is not included. A compatible local schema is required to exercise database-backed features.
 
+With JDK 11 installed, compile and test the application with:
+
+```text
+./gradlew clean test classes
+```
+
+After configuring the database and environment variables, launch it with:
+
+```text
+./gradlew run
+```
+
+The Gradle build resolves JavaFX, MySQL Connector/J, and JUnit automatically.
+
 ## Project context
 
 Originally created by Terin Pulley in 2021 as a university Software II project. It is preserved as a portfolio example of Java desktop application architecture. No grading rubric, assessment prompt, production credentials, or customer data is included.
