@@ -23,14 +23,16 @@ A JavaFX desktop application for managing customers and appointments across time
 
 ## Local configuration
 
-The application expects a local MySQL database named `client_schedule`. Database credentials are never stored in source control. Set these environment variables before launching:
+With no database environment variables, the application starts in portfolio demo mode using a seeded, in-memory H2 database containing fictional records. Sign in with username `demo` and password `demo`; changes disappear when the application exits.
+
+To use a local MySQL database named `client_schedule` instead, set these environment variables before launching:
 
 ```text
 SCHEDULER_DB_USER
 SCHEDULER_DB_PASSWORD
 ```
 
-The original classroom database schema is not included. A compatible local schema is required to exercise database-backed features.
+The original classroom database schema is not included. A compatible local schema is required only for the MySQL-backed mode.
 
 With JDK 11 installed, compile and test the application with:
 

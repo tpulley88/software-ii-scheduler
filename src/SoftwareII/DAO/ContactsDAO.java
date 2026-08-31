@@ -30,9 +30,7 @@ public class ContactsDAO {
 
         PreparedStatement contListStatement = JDBC.getPreparedStatement();
 
-        contListStatement.execute(sqlStatement);
-
-        ResultSet rs = contListStatement.getResultSet();
+        ResultSet rs = contListStatement.executeQuery();
 
         if (rs != null) {
             while (rs.next()) {

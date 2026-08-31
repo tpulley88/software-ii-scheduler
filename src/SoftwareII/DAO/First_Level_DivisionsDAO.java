@@ -27,9 +27,7 @@ public class First_Level_DivisionsDAO {
 
         PreparedStatement divisionListStatement = JDBC.getPreparedStatement();
 
-        divisionListStatement.execute(sqlStatement);
-
-        ResultSet rs = divisionListStatement.getResultSet();
+        ResultSet rs = divisionListStatement.executeQuery();
 
         if (rs != null) {
             while (rs.next()) {

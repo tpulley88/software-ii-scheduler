@@ -3,6 +3,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+import org.h2.tools.RunScript;
 
 /**Method that allows user to communicate with database
  */
@@ -14,29 +17,41 @@ public class JDBC {
     private static final String location = "//localhost/";
     private static final String databaseName = "client_schedule";
 
-    private static final String jdbcUrl = protocol + vendor + location + databaseName + "?connectionTimeZone = SERVER"; // LOCAL
-
-    private static final String driver = "com.mysql.cj.jdbc.Driver"; // Driver reference
-    private static final String userName = requireEnvironmentVariable("SCHEDULER_DB_USER");
-    private static final String password = requireEnvironmentVariable("SCHEDULER_DB_PASSWORD");
     private static Connection connection = null;  // Connection Interface
     private static PreparedStatement preparedStatement;
 
-    private static String requireEnvironmentVariable(String name) {
-        String value = System.getenv(name);
-        if (value == null || value.isBlank()) {
-            throw new IllegalStateException(name + " must be configured before starting the application");
-        }
-        return value;
+    public static boolean isDemoMode() {
+        return isBlank(System.getenv("SCHEDULER_DB_USER")) ||
+                isBlank(System.getenv("SCHEDULER_DB_PASSWORD"));
+    }
+
+    private static boolean isBlank(String value) {
+        return value == null || value.isBlank();
     }
 
     /**Establishes connection with SQL database
      */
     public static void makeConnection() {
         try {
-              Class.forName(driver); // Locate Driver
-              connection = DriverManager.getConnection(jdbcUrl, userName, password); // reference Connection object
-              System.out.println("Connection successful!");
+              if (isDemoMode()) {
+                  Class.forName("org.h2.Driver");
+                  connection = DriverManager.getConnection(
+                          "jdbc:h2:mem:client_schedule;MODE=MySQL;DB_CLOSE_DELAY=-1;NON_KEYWORDS=START,END,TYPE",
+                          "sa",
+                          "");
+                  RunScript.execute(connection, new InputStreamReader(
+                          JDBC.class.getResourceAsStream("/SoftwareII/Utility/demo-schema.sql"),
+                          StandardCharsets.UTF_8));
+                  System.out.println("Connected to fictional in-memory demo database.");
+              } else {
+                  Class.forName("com.mysql.cj.jdbc.Driver");
+                  String jdbcUrl = protocol + vendor + location + databaseName + "?connectionTimeZone=SERVER";
+                  connection = DriverManager.getConnection(
+                          jdbcUrl,
+                          System.getenv("SCHEDULER_DB_USER"),
+                          System.getenv("SCHEDULER_DB_PASSWORD"));
+                  System.out.println("Connected to configured MySQL database.");
+              }
         }
         catch(ClassNotFoundException | SQLException e) {
               System.out.println("Error:" + e.getMessage());
@@ -55,7 +70,7 @@ public class JDBC {
      */
     public static void closeConnection() {
         try {
-            connection.close();
+            if (connection != null) connection.close();
             System.out.println("Connection closed!");
         } catch (SQLException e) {
             System.out.println(e.getMessage());

@@ -10,3 +10,4 @@ login_activity.txt
 .DS_Store
 .env
 *.sql
+!src/SoftwareII/Utility/demo-schema.sql

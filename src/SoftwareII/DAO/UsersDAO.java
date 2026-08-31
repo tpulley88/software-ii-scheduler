@@ -27,9 +27,7 @@ public class UsersDAO {
 
         PreparedStatement userListStatement = JDBC.getPreparedStatement();
 
-        userListStatement.execute(sqlStatement);
-
-        ResultSet rs = userListStatement.getResultSet();
+        ResultSet rs = userListStatement.executeQuery();
 
         if (rs != null) {
             while (rs.next()) {

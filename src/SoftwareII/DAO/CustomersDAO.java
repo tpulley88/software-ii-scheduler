@@ -31,9 +31,7 @@ public class CustomersDAO {
 
         PreparedStatement custListStatement = JDBC.getPreparedStatement();
 
-        custListStatement.execute(sqlStatement);
-
-        ResultSet rs = custListStatement.getResultSet();
+        ResultSet rs = custListStatement.executeQuery();
 
         if (rs != null) {
             while (rs.next()) {

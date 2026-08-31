@@ -35,11 +35,8 @@ public class AppointmentsDAO {
 
         PreparedStatement apptListStatement = JDBC.getPreparedStatement();
 
-        //Executes SQL statement
-        apptListStatement.execute(sqlStatement);
-
-        //Returns SQL results
-        ResultSet rs = apptListStatement.getResultSet();
+        //Executes SQL statement and returns its results
+        ResultSet rs = apptListStatement.executeQuery();
 
         //Parses data from SQL results
         if (rs != null) {

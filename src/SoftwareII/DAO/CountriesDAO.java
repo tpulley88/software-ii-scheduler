@@ -27,9 +27,7 @@ public class CountriesDAO {
 
         PreparedStatement countryListStatement = JDBC.getPreparedStatement();
 
-        countryListStatement.execute(sqlStatement);
-
-        ResultSet rs = countryListStatement.getResultSet();
+        ResultSet rs = countryListStatement.executeQuery();
 
         if (rs != null) {
             while (rs.next()) {
